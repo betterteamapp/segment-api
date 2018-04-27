@@ -1,5 +1,5 @@
 name:                segment-api
-version:             0.1.0.1
+version:             0.1.0.2
 synopsis:            Initial project template from stack
 description:         Please see README.md
 homepage:            https://github.com/mwotton/segment-api#readme
@@ -15,16 +15,19 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Web.Segment, Web.Segment.Types, Paths_segment_api
+  exposed-modules:     Web.Segment, Web.Segment.Types, Web.Segment.TH, Paths_segment_api
   build-depends: aeson
                , aeson-qq
+               , auto-update
                , base >= 4.7 && < 5
                , bytestring
                , cases
                , containers
                , currency
                , Decimal
+               , dlist
                , email-validate
+               , hashable
                , http-client
                , http-client-tls
                , iproute
@@ -35,7 +38,10 @@ library
                , text
                , time
                , transformers
+               , unordered-containers
                , uuid
+               , vector
+               , mtl
   default-language:    Haskell2010
 
 source-repository head
@@ -53,6 +59,6 @@ test-suite tests
   build-depends: base
                , hspec
                , hspec-stack-rerun
-               , segment-api
+               -- , segment-api
                , uuid
                , time
