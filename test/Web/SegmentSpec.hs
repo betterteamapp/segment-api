@@ -1,11 +1,14 @@
 {-# LANGUAGE OverloadedStrings #-}
+
 module Web.SegmentSpec where
 
-import           Data.Time          (getCurrentTime)
+import Test.Hspec
+
+import Data.Time (getCurrentTime)
+import System.Environment
+import Web.Segment
+
 import qualified Data.UUID.V4       as UUID
-import           System.Environment
-import           Test.Hspec
-import           Web.Segment
 
 spec :: Spec
 spec =
@@ -23,4 +26,5 @@ spec =
     response `shouldBe` Right SegmentResponse
 
   it "should also work for all the other things that i haven't done yet" $ do
+--    1 `shouldBe` 2
     pendingWith "later"
