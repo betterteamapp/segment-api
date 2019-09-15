@@ -42,7 +42,6 @@ source-repository head
   type:     git
   location: https://github.com/mwotton/segment-api
 
-
 test-suite tests
   type: exitcode-stdio-1.0
   main-is: SpecWrapper.hs
