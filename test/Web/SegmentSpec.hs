@@ -18,7 +18,9 @@ spec =
     print (key, u, t)
     let ident = FullMsg emptyFreeform emptyIdentify (emptyCommonMsg t $ Anonymous "rhabdo the clown") emptyFreeform
         track = FullMsg emptyFreeform (Track "signup" emptyTrackProperties) (emptyCommonMsg t $ Anonymous "rhabdo the clown") emptyFreeform
-    runner (BatchedMsg u [ident, track] t) `shouldReturn` Right SegmentResponse
+    response <- runner (BatchedMsg u [ident, track] t)
+    print response
+    response `shouldBe` Right SegmentResponse
 
   it "should also work for all the other things that i haven't done yet" $ do
     pendingWith "later"
