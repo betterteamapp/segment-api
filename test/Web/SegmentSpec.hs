@@ -7,6 +7,7 @@ import           System.Environment
 import           Test.Hspec
 import           Web.Segment
 
+spec :: Spec
 spec =
   describe "segment tests" $ do
   it "simple identify + track signup" $ do
