@@ -44,14 +44,13 @@ source-repository head
 
 test-suite tests
   type: exitcode-stdio-1.0
-  main-is: SpecWrapper.hs
-  other-modules:  Spec, Web.SegmentSpec
+  main-is: Spec.hs
+  other-modules:  Web.SegmentSpec
   hs-source-dirs:
       test
   ghc-options: -Wall -fwarn-tabs -fno-warn-type-defaults -threaded -rtsopts -with-rtsopts=-N
   build-depends: base
                , hspec
-               , hspec-stack-rerun
                , segment-api
                , uuid
                , time

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
 export SEGMENT_KEY=
-export HSPEC_FAILURES_FILE="$PWD/hspec.log"
-stack test --fast --file-watch --test-arguments '--rerun'
+stack test --work-dir .stack-work-test --fast --file-watch

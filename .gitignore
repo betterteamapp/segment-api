@@ -1,1 +1,4 @@
+*.log
+.dir-locals.el
+/.stack-work-test/
 /.stack-work/

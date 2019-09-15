@@ -5,7 +5,6 @@ packages:
 
 extra-deps:
 - currency-0.2.0.0
-- hspec-stack-rerun-0.1.0.3
 
 nix:
   packages: [ ncurses zlib ]

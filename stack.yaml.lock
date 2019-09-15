@@ -11,13 +11,6 @@ packages:
       sha256: 8ff3883593d9fb1c869671ee6c42e245aa015c4e1941f5986e8175b9adbf2f67
   original:
     hackage: currency-0.2.0.0
-- completed:
-    hackage: hspec-stack-rerun-0.1.0.3@sha256:1c983d62f4dcddb20b9e9bf11d99f832a4af59e0aed147669e998e75b10fcdff,660
-    pantry-tree:
-      size: 213
-      sha256: 130cba1c0e5ba0f93cb79c010e9ab940e3da1aa505ce7aafdf5b860bc1e0c0d4
-  original:
-    hackage: hspec-stack-rerun-0.1.0.3
 snapshots:
 - completed:
     size: 500539

@@ -26,5 +26,5 @@ spec =
     response `shouldBe` Right SegmentResponse
 
   it "should also work for all the other things that i haven't done yet" $ do
---    1 `shouldBe` 2
-    pendingWith "later"
+   pendingWith "TODO"
+   1 `shouldBe` 2
