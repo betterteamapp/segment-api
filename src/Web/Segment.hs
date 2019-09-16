@@ -54,7 +54,7 @@ type SegmentApi
       :> Post '[JSON] SegmentResponse)
 
 
-mkRunner :: String -> IO (BatchedMsg -> IO (Either ServantError SegmentResponse))
+mkRunner :: String -> IO (BatchedMsg -> IO (Either ClientError SegmentResponse))
 mkRunner key = do
   manager <- newManager tlsManagerSettings
   let baseURL = BaseUrl Https "api.segment.io" 443 "/v1"
