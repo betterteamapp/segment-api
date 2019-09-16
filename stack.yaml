@@ -3,9 +3,6 @@ resolver: lts-14.6
 packages:
 - '.'
 
-extra-deps:
-- currency-0.2.0.0
-
 nix:
   packages: [ ncurses zlib ]
   pure: false
