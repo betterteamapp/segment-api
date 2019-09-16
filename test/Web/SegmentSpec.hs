@@ -8,11 +8,10 @@ import Data.Time (getCurrentTime)
 import System.Environment
 import Web.Segment
 
-import qualified Data.UUID.V4       as UUID
+import qualified Data.UUID.V4 as UUID
 
 spec :: Spec
-spec =
-  describe "segment tests" $ do
+spec = describe "segment tests" $ do
   it "simple identify + track signup" $ do
     key <- getEnv "SEGMENT_KEY"
     runner <- mkRunner key
@@ -26,5 +25,5 @@ spec =
     response `shouldBe` Right SegmentResponse
 
   it "should also work for all the other things that i haven't done yet" $ do
-   pendingWith "TODO"
-   1 `shouldBe` 2
+    pendingWith "TODO"
+    1 `shouldBe` 2
