@@ -1,8 +1,9 @@
-resolver: lts-16.22
+resolver: lts-18.1
 
 packages:
 - '.'
 
 nix:
+  path: ["nixpkgs=https://github.com/NixOS/nixpkgs/tarball/860b56be91fb874d48e23a950815969a7b832fbc"]
   packages: [ ncurses zlib ]
   pure: false

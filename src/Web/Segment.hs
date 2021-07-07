@@ -60,7 +60,7 @@ mkRunner key = do
   let baseURL = BaseUrl Https "api.segment.io" 443 "/v1"
 --  let baseURL = BaseUrl Http "localhost" 8888 "/v1"
       basicAuthData = BasicAuthData (BS8.pack key) ""
-      appCall m = runClientM m (ClientEnv manager baseURL Nothing)
+      appCall m = runClientM m (mkClientEnv manager baseURL)
   return $ \msg -> appCall $ segmentClient basicAuthData msg
 
 
